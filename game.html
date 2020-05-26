@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess the number</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="row" id="extra">
+     <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:#000000;color: white">
+    <table id="Instructions">
+      <br>
+      <tr><h4 class="text-center">Instructions:<br>(Read Intructions Carefully)</h4></tr></h4></tr><br>
+      <tr><p>1. Guess four digit Number.</p></tr>
+      <tr><p>2. Each digit of four digit number is from 0-9.</p></tr>
+      <tr><p>3.This number is guessed by you via multiple attempts.</p></tr>
+      <tr><p>4. Number can appear more than once.</p></tr>
+      <tr><p>5. You can make only 5 attempts.</p></tr>
+      <tr><p>6. The application compares the user input number to the number it randomly generated.</p></tr>
+      <tr><p>7. If the numbers don't match, it will provide a hint and ask the user to guess again.</p></tr>
+      <tr><p>8. If the numbers do match, the game ends, but can be started again if the user wants to.</p></tr>
+      <tr>9. The following icons indicates:</tr><br>
+      <tr><i class="fa fa-check"></i>  Correct Postion.</tr><br>
+      <tr><i class="fa fa-exchange"></i>  Number exist, But not in the correct postion.</tr><br>
+      <tr><i class="fa fa-times"></i>  Wrong Number.</tr><br><br>
+      <tr><p>10. There is no special icon if number appear more than once.</p></tr>
+    </table>
+   </div>
+  <div class="col-sm-9 col-md-6 col-lg-8 ">
+      	<h1 class="text-center" style="color: #009970">Guess the Number Game</h1>
+     	<h3 class="text-center" style="color: #ff3300">? ? ? ? </h3>
+   <div class="row" >
+      <input type="number" id="input_type" class="form-control"><br>
+          <div class="col text-center">
+            <input type="hidden" id="value">
+            <input type="hidden" id="turn">
+            <button onclick="checknumber();" class="btn btn-success" id="check" >Guess the number</button>
+            <button id="replay" class="btn btn-danger" onclick="window.location.reload();">Play Again</button>
+          </div>
+   </div>
+   <div>
+   	    <div id="msg" class="text-center"></div>
+   </div><br>
+   <div id="success" class="text-center" >
+    <div>
+   <div class="row justify-content-center">
+    <div class="col-sm-4">
+    <table class="table table-striped" id="results">
+      <tr>
+       <th>Guess</th>
+       <th>Result</th>
+     </tr>
+    </table>
+  </div>
+   </div>
+   </div>
+   </div>
+ </div>
+  <script type="text/javascript" src="game.js"></script>
+</body>
+</body>
+</html>
